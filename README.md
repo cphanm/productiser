@@ -1,4 +1,4 @@
-# Productiser — Competitive Analysis Toolkit
+# Competitive Analysis Toolkit
 
 A Claude Code skill that runs a structured competitive analysis for any product, generates a full report, and tracks changes month-over-month using versioned snapshots.
 
