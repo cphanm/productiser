@@ -3,8 +3,8 @@ You are running a competitive analysis. Follow these steps in order.
 ## Step 1 — Load context
 
 Read both files:
-- `original/product.md` — product description and positioning
-- `original/competitors.md` — seed competitor list with URLs, pricing, and notes
+- `competitive-analysis/input/product.md` — product description and positioning
+- `competitive-analysis/input/competitors.md` — seed competitor list with URLs, pricing, and notes
 
 From `original/product.md`, extract:
 - PRODUCT_NAME — the name of the product
@@ -15,7 +15,7 @@ From `original/product.md`, extract:
 Use these throughout all subsequent steps instead of any hardcoded product-specific references.
 
 Then check for a previous snapshot:
-- List files in `output/` matching the pattern `snapshot_*.json`
+- List files in `competitive-analysis/output/` matching the pattern `snapshot_*.json`
 - If one or more exist, load the most recent one (highest YYYY-MM in filename)
 - Store it as PREVIOUS_SNAPSHOT for use in Step 5
 
@@ -60,7 +60,7 @@ For each approved competitor, search the web to gather:
 - B2B angle: any employer, insurer, or healthcare system distribution deals
 - Notable partnerships that drive distribution
 
-Use the `app_store`, `product_hunt`, and `url` fields from competitors.md as your starting URLs.
+Use the `app_store`, `product_hunt`, and `url` fields from `competitive-analysis/input/competitors.md` as your starting URLs.
 
 ## Step 5 — Synthesise report
 
@@ -132,10 +132,10 @@ Be direct and opinionated. Call out what PRODUCT_NAME should copy, what to avoid
 ## Step 6 — Save report and snapshot
 
 ### 6a — Save the report
-Save the report to `output/competitive_analysis.md`, overwriting any previous version.
+Save the report to `competitive-analysis/output/competitive_analysis.md`, overwriting any previous version.
 
 ### 6b — Save the snapshot
-Write a snapshot file to `output/snapshot_YYYY-MM.json` (use the current year and month).
+Write a snapshot file to `competitive-analysis/output/snapshot_YYYY-MM.json` (use the current year and month).
 
 The snapshot must follow this exact schema — one object per competitor:
 
